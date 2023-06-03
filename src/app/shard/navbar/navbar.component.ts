@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   // خزنت فيها داتا
   user:any = null
   ngOnInit(): void {
-   this.service.users.subscribe((res:any) => {
+   this.service.users$.subscribe((res:any) => {
      if(res.role) {
        this.user = res
      }
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
     const model = {}
     this.service.login(model).subscribe(res => {
       this.user = null
-      this.service.users.next(res)
+      this.service.users$.next(res)
     })
   }
 }

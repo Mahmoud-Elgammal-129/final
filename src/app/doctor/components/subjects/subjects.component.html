@@ -7,12 +7,12 @@
                 </div>
                 <div class="subBtn">
                    
-                    <!-- *ngIf="user?.role == 'doctor'"
-                    *ngIf="user?.role == 'doctor'"
-                    *ngIf="user?.role == 'register'" -->
-                 <button   mat-raised-button color="warn"   (click)="delete(index)" class="mx-1 btn btn-danger">حذف</button>
-                 <button  mat-raised-button color="primary"  class="mx-1 btn btn-primary">عرض</button>
-                 <button  mat-raised-button class="mx-1 btn btn-success">ابدأ الاختبار</button>
+                   
+                   
+                   
+                 <button  *ngIf="user?.role == 'doctor'"  mat-raised-button color="warn"   (click)="delete(index)" class="mx-1 btn btn-danger">حذف</button>
+                 <button  *ngIf="user?.role == 'doctor'" mat-raised-button color="primary"  class="mx-1 btn btn-primary">عرض</button>
+                 <button  *ngIf="user?.role == 'register'" mat-raised-button class="mx-1 btn btn-success">ابدأ الاختبار</button>
                 </div>
             </div>
         </div>

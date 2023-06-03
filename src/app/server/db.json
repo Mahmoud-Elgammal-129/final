@@ -17,7 +17,13 @@
       "username": "mahmoud",
       "email": "mahmoud@gamil.com",
       "password": "1234",
-      "confirmPassword": "1234",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "1",
+          "degree": 2
+        }
+      ],
       "id": 2
     },
     {
@@ -102,9 +108,9 @@
   ],
   "login": [
     {
-      "username": "mahmoud",
-      "role": "register",
-      "userId": 2,
+      "username": "admin",
+      "role": "doctor",
+      "userId": 1,
       "id": 1
     }
   ],

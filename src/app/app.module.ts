@@ -16,6 +16,8 @@ import { NewExamComponent } from './doctor/components/new-exam/new-exam.componen
 import { StudentsComponent } from './doctor/components/students/students.component';
 import { SubjectsComponent } from './doctor/components/subjects/subjects.component';
 import { ExamComponent } from './student/components/exam/exam.component';
+import {MatTableModule} from '@angular/material/table';
+
 import { NavbarComponent } from './shard/navbar/navbar.component';
 
 @NgModule({
@@ -37,6 +39,7 @@ import { NavbarComponent } from './shard/navbar/navbar.component';
     MatInputModule,
     MatStepperModule,
     MatRadioModule,
+    MatTableModule,
     HttpClientModule,
     MatFormFieldModule,
     BrowserAnimationsModule

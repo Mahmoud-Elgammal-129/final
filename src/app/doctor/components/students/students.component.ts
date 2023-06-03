@@ -8,8 +8,8 @@ import { AuthService } from 'src/app/services/auth/services/auth.service';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent  implements OnInit{
-  dataSource:any
-  datatable:any
+  dataSource:any=[]
+  datatable:any=[]
   displayedColumns:any
   constructor(private service:AuthService) {
     this.displayedColumns = ['position', 'name', 'subjectName', 'degree'];

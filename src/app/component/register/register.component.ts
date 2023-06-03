@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth/services/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  users:any[]=[]
+  users$:any[]=[]
   userform!:FormGroup
 
   constructor(private fb:FormBuilder,private services:AuthService,private router:Router, private toaster:ToastrService){
@@ -29,12 +29,12 @@ export class RegisterComponent implements OnInit {
  
   getuser(){
     this.services.getuser('register').subscribe((res:any)=>{
-this.users=res
+this.users$=res
     })
   }
   onSubmit(){
     const user:Register=this.userform.value;
-    let index=this.users.findIndex(item=>item.email==this.userform.value.email)
+    let index=this.users$.findIndex(item=>item.email==this.userform.value.email)
     if(index!==-1){
       this.toaster.error("this email is used before","",{
       disableTimeOut: false,
@@ -57,7 +57,7 @@ this.users=res
           userId:res.id
         }
         this.services.login(model).subscribe((res:any )=> {
-          this.services.users.next=res
+          this.services.users$.next=res
           })
           this.router.navigate(['/subjects'])
         })     

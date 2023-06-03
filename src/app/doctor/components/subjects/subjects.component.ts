@@ -15,6 +15,7 @@ subjects:any[]=[]
 user:any = {}
 ngOnInit(){
   this.getsubject()
+  this.getUserInfo()
 }
 
 getsubject(){
@@ -23,8 +24,9 @@ getsubject(){
   })
 }
 getUserInfo() {
-  this.auth.getRole().subscribe(res=> {
+  this.auth.getRole().subscribe(res=> {    
     this.user = res
+    console.log(this.user)
   })
 }
 delete(index:number){

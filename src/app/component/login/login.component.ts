@@ -13,7 +13,7 @@ import { AuthService } from'src/app/services/auth/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!:FormGroup;
-  users:any[]=[]
+  users$:any[]=[]
   type:string="register"
   constructor(private http:HttpClient,private fb:FormBuilder,private services:AuthService,private router:Router , private toastr:ToastrService){
     this.loginForm = this.fb.group({
@@ -35,14 +35,14 @@ getRole(event:any) {
 }
 getUsers() {
   this.services.getuser(this.type).subscribe((res:any) => {
-    this.users= res
+    this.users$= res
   })
 }
 
 submit() {
  
 
-  let index = this.users.findIndex(item => item.email == this.loginForm.value.email && item.password == this.loginForm.value.password  )
+  let index = this.users$.findIndex(item => item.email == this.loginForm.value.email && item.password == this.loginForm.value.password  )
   if(index == -1) {
     this.toastr.error("الايميل او كلمة المرور غير صحيحة" , "" , {
       disableTimeOut: false,
@@ -53,12 +53,13 @@ submit() {
     })
   }else {
     const model = {
-      username:this.users[index].username,
+      username:this.users$[index].username,
       role:this.type,
-      userId:this.users[index].id
+      userId:this.users$[index].id
     }
     this.services.login(model).subscribe((res:any )=> {
-      this.services.users.next=res
+      console.log(res)
+      this.services.users$.next(res)
       this.toastr.success("تم تسجيل الدخول بنجاح" , "" , {
         disableTimeOut: false,
         titleClass: "toastr_title",

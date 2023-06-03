@@ -9,7 +9,7 @@ import { Register } from 'src/app/models/register';
 export class AuthService {
   baseURL: string = 'http://localhost:3000/';
   // بستخدمها لما اعمل بوش للداتا واعمل سابسكريب عليها 
-  users = new Subject()
+  users$ = new Subject<any>()
   constructor(private http: HttpClient) { }
   createuser(user:Register){
     return this.http.post<Register>(this.baseURL+'register',user)
