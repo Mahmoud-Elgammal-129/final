@@ -19,6 +19,10 @@ import { ExamComponent } from './student/components/exam/exam.component';
 import {MatTableModule} from '@angular/material/table';
 
 import { NavbarComponent } from './shard/navbar/navbar.component';
+import { FooterComponent } from './shard/footer/footer.component';
+import { HomeComponent } from './shard/home/home.component';
+import { AboutComponent } from './shard/about/about.component';
+import { ContactComponent } from './shard/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { NavbarComponent } from './shard/navbar/navbar.component';
     StudentsComponent,
     SubjectsComponent,
     ExamComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

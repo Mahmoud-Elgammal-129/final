@@ -9,6 +9,11 @@
           "name": "math",
           "id": "1",
           "degree": 3
+        },
+        {
+          "name": "OS Exam",
+          "id": "2",
+          "degree": 2
         }
       ],
       "id": 1
@@ -22,6 +27,16 @@
           "name": "math",
           "id": "1",
           "degree": 2
+        },
+        {
+          "name": "NW",
+          "id": "3",
+          "degree": 1
+        },
+        {
+          "name": ";oerjg",
+          "id": "5",
+          "degree": 1
         }
       ],
       "id": 2
@@ -108,9 +123,6 @@
   ],
   "login": [
     {
-      "username": "admin",
-      "role": "doctor",
-      "userId": 1,
       "id": 1
     }
   ],
@@ -152,6 +164,42 @@
         }
       ],
       "id": 1
+    },
+    {
+      "name": "OS Exam",
+      "questions": [
+        {
+          "question": "What is an operating system?",
+          "answer1": "interface between the hardware and application programs",
+          "answer2": "collection of programs that manages hardware resources",
+          "answer3": "system service provider to the application programs",
+          "answer4": "all of the mentioned",
+          "correctAnswer": "all of the mentioned"
+        },
+        {
+          "question": "Which one of the following is not a real time operating system?",
+          "answer1": " RTLinux",
+          "answer2": "Palm OS",
+          "answer3": "VxWorks",
+          "answer4": "QNX",
+          "correctAnswer": "Palm OS"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "NW",
+      "questions": [
+        {
+          "question": "jdksfs",
+          "answer1": "lf;ds",
+          "answer2": "lewfj",
+          "answer3": "kd",
+          "answer4": "jkdh",
+          "correctAnswer": "lf;ds"
+        }
+      ],
+      "id": 3
     }
   ]
 }
