@@ -1,5 +1,5 @@
 body{
-    background-color: #7a36f4;
+    background-color: #526D82;
 }
 .subjectBox {
     margin: auto;
@@ -14,7 +14,7 @@ body{
         text-align: center;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
-        background-color: #AEE2FF;
+        background-color: #526D82;
         margin-top: 20px;
         &:hover {
             transform: translateY(-15px);
@@ -44,6 +44,6 @@ div {
     font-size: 35px;
     font-weight: 600;
     color: #FFF;
-    background-color: #B799FF;
+    background-color: #526D82;
     border-radius: 10px;
 }

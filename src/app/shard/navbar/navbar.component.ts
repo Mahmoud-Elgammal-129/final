@@ -7,8 +7,9 @@ import { AuthService } from 'src/app/services/auth/services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  isMenuCollapsed=true;
   constructor(private service:AuthService) { }
-  // خزنت فيها داتا
+  
   user:any = null
   ngOnInit(): void {
    this.service.users$.subscribe((res:any) => {
